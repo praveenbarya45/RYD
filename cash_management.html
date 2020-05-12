@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/cash_management.css">
+<script language="JavaScript" type="text/javascript">
+<!-- Begin
+function s(num, val) {
+amount = num * 1; // amount is the num or NaN
+sum = (!num ? 0 : num) * val;  // the sum for that bill or coin
+
+if (isNaN(amount)) { // if the entire is not a number
+
+alert(
+"' " + num + " ' is not a valid entry and that field will "
++ "not be included in the total money calculation."
+);
+
+return 0;
+}
+else
+return sum; // if it is OK, send sum back
+}
+
+function money(form) {
+hun = s(form.hun.value, 2000); // Each amount is the returned value
+fif = s(form.fif.value, 500);  // for the amount in the s() function
+two=s(form.two.value, 200);
+twe = s(form.twe.value, 100);
+ten2 = s(form.ten2.value, 50);
+fiv = s(form.fiv.value, 20);
+ten = s(form.ten.value, 10);
+ten1 = s(form.ten1.value, 10);
+fi = s(form.fi.value, 5);
+fiv1 = s(form.fiv1.value, 2);
+one = s(form.one.value, 1);
+// add up all the amounts
+var ttl = hun + fif +two+ twe + ten2 + fiv + ten + ten1 + fi + fiv1 
++ one;
+
+ttl = "" + ((Math.round(ttl * 100)) / 100);
+
+dec1 = ttl.substring(ttl.length-3, ttl.length-2);
+dec2 = ttl.substring(ttl.length-2, ttl.length-1);
+
+if (dec1 != '.') { 
+if (dec2 == '.') ttl += "0";
+else ttl += ".00";
+}
+form.total.value = "Rs " + ttl; // display total amount
+}
+//  End -->
+
+</script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+</style>
+</head>
+<body >
+
+
+<center><br>
+<div class="topnav">
+           <title>"Cash Management System"</title>
+ <br>
+	       <b align="center" class="active" href="#home">Cash Management System</b><br><br>	 
+	        </center>	 	
+             </form>
+	
+           </div>
+  
+  <ul>
+  <center>
+  <div class="container1">
+   
+	 <br><br><br><br><br><br><br>
+              <div class="fold">
+ &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; <a align="center" class="a" >NOTES</a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+	&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  <a align="right" class="a" >COINS</a>
+<center><br>
+<div class="inner">
+<ul>
+                                <div class="row">
+                                                <form>
+                                                      <br>  <br>
+                                      <div class="input-icons"> 
+                                                   		  <input type="submit" align="left"  name="submit" class="" value="BALANCE">	<br>
+                                                    <input type="submit" align="left"  name="submit" class="" value="TRANSFER"><br>
+                                           <input type="submit" align="left"  name="submit" class="" value="HISTORY"><br>
+										     <input type="submit" align="left"  name="submit" class="" value="STATUS"><br>
+											  <input type="submit" align="left"  name="submit" class="" value="UPLOAD"><br>
+											   <input type="submit" align="left"  name="submit" class="" value="BACK">
+     	                             </div>
+  	                          </div>
+                                            
+	                                               </ul>         
+                                                              </form>
+
+                                                     
+		                                  
+                     </div>     
+	                                
+<table border="2px" cellpadding="1" cellspacing="0" width="750px"  id="mainbg">
+
+<tbody>
+<tr><td>
+ <form name="coinform">
+	  <table id="customers" border="1px">
+        <tbody>
+		 <tr> <th width="80px">2000's X</th><th width="180px"><input type="text" name="hun" size="3"></th><th width="2px" >10's X</th><th width="80px"><input type="text" width="80px" name="ten1" size="3"></th></tr>
+		 <tr> <th>500's X</th><th><input type="text" name="fif" size="3"></th><th>5's X</th><th><input type="text" name="fi" size="3"></th></tr>
+         <tr> <th>200's X</th><th><input type="text" name="two" size="3"></th><th>2's X</th> <th><input type="text" name="fiv1" size="3"></th></tr>
+         <tr> <th>100's X</th><th><input type="text" name="twe" size="3"></th><th>1's X</th><th><input type="text" name="one" size="3"></th></tr>     
+          <tr><th>50's X</th><th><input type="text" name="ten2" size="3"></th></tr>
+          <tr><th>20's X</th> <th><input type="text" name="fiv" size="3"></th><td colspan="11" align="center">
+		  <input type="button" name="calc" class="upload1" value="Calculate" onclick="javascript:money(this.form)"> 
+		  <input type="text" name="total" size="10">
+		  </td>   
+        <tr> <th>10's X</th><th><input type="text" name="ten" size="3"></th>
+		<th><input type="submit" align="center"  name="submit" class="" value="SAVE"></th>
+		<th><input type="submit" align="centert"  name="submit" class="upload" value="CLOSE"></th></tr>
+          
+          
+		
+        <tr>
+          
+       
+	   </tr>
+      </tbody>
+	  </table>
+	  </table>
+	                
+                                                     
+		 
+      </center>
+	  
+</div>
+
+</div>
+</div>
+	  </div>	  
+    </form>	
+</body>
+</html>

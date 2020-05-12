@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>customer balance</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/customer_balance_details.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="header background_color text-white  text-center">
+        <h5 class="align-text-bottom">CUSTOMER BALANCE DETAILS</h5>
+    </div>
+	<div class="div7">
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <form class="rounded-2 bg-dark col-sm-3 form-inline d-flex justify-content-center md-form form-sm  mt-2" >
+            <input class=" mr-3 w-75 bg-dark border-0 text-white"  type="text" placeholder="Search"
+              aria-label="Search" id="searchTable" >
+            <i class="fas fa-search" aria-hidden="true"></i>
+        </form>
+        <div class=" col-sm-6">
+        <input type="checkbox" id="searchAll" name="searchAll" class="align-middle">All
+        <button class="col-sm background_color button_size text-white  text-center">Export to Excel</button>
+        <button class="col-sm background_color button_size text-white  text-center">Export to PDF</button>
+        </div>
+
+    </div>
+<!-- search and buttons over -->
+
+<div class="row">
+        <div class="col-sm-3 justify-content-center mt-2 ">
+<!-- form  -->
+            
+
+            <div class="form-group table_column mx-3 py-5 px-3">
+                
+                <input type="text" class="form_entry mx-auto" id="balanceBillNo" placeholder="  Bill Number" value=""><br><br>
+                <input type="text" class="form_entry mx-auto" id="balanceCustomer" placeholder="  Customer"><br><br>
+                <input type="text" class="form_entry mx-auto" id="balanceAmount" placeholder="  Amount"><br><br>
+                <input type="text" class="form_entry mx-auto" id="balanceDebit" placeholder="  Debit Amount"><br><br>
+                <input type="text" class="form_entry mx-auto" id="balanceCredit" placeholder="  Credit Amount"><br><br>
+
+                
+                  <input type="checkbox" id="balancePaid" name="paid" >Paid
+            </div> 
+        </div>
+<div class="col-sm-9  table_column mt-2 pt-0 pl-3 pr-0 pb-3 text-center">
+<!-- table -->
+    <div class="row text-center" id="table_row">
+    <table class="table table-striped table-bordered table-sm css-serial " id="balanceTable">
+    <thead>
+      <tr>
+        
+        <th scope="col" class="">Sr No</th>
+        <th scope="col" class="">Bill No</th>
+        <th scope="col" class="">Date</th>
+        <th scope="col" class="">Customer</th>
+        <th scope="col" class="">Mobile</th>
+        <th scope="col" class="">Paid Amt</th>
+        <th scope="col" class="">Debit</th>
+        <th scope="col" class="">Credit</th>
+        <th scope="col" class="">Is Paid</th>
+        
+      </tr>
+    </thead>
+    <tbody id="tableBody">
+
+    </tbody>
+            </table>
+     </div>    
+     <div class="buttonGroup ">
+        <button class=" background_color button_size text-white  text-center " onclick="updateRow()">Update</button>
+        <button class=" background_color button_size text-white  text-center " onclick="deleteRow()">Delete</button>
+        <button class=" background_color button_size text-white  text-center " onclick="resetTable()">Reset</button>
+    </div>     
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<script src="js/customer_balance_details.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+<head>
+<br>
+<link rel="stylesheet" href="css/customer_management.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          href= 
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#customers tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+    <style>        
+        
+<style type="text/css">
+
+</head>
+</style>
+</head>
+<div class="div4">
+<body background="#ddd" width="100%">
+
+<center>
+<div class="topnav"><br>
+           <title>"Customer Management"</title>
+ 
+	       <b align="center" class="active" href="#home">Customer Management</b><br><br>	 
+	        </center>	 	
+             </form>
+	
+           </div>
+  
+  <ul>
+  
+  <center>
+  <div class="container1">
+     <br><br><br><br><br>
+	 
+              <div class="fold">
+                  <div div="div5">
+                       &emsp;&emsp;&emsp;&emsp;
+                          <input type="submit" align="left"  name="submit" class="" value="ADD TABLE">
+
+                              &emsp;&emsp;&emsp;&emsp;&emsp;
+                                   <span class="yourtext">
+ 
+                                       <i class="fa fa-search" color="#3366ff" style="font-size:30px"></i>&nbsp;
+                                               </span>
+                                         <input id="myInput" type="text" placeholder="Search By Name..">&emsp;&emsp;
+                                             &emsp;&emsp;&emsp;&emsp;&emsp;
+                                                <input type="submit" align="left"  name="submit" class="" value="RESET">
+                  </div>
+ 
+                                   <table id="customers">
+
+                               <tr>
+                                 <thead>
+                            <th width="1%" >S.No.</th>
+                              <th width="20%" >Name</th>
+                           <th width="20%" >Contact</th>
+                            <th width="20%" >Mail</th>
+	                         <th width="20%" >Note</th>
+	                         <th width="30%" >Address</th>
+	
+                                    </tr>
+                                  </thead>
+  
+                                               <tr>
+                                              <td contenteditable="true">1.</td>
+                                                  <td contenteditable="true"></td>
+                                                 <td contenteditable="true"></td>
+	                                             <td contenteditable="true"></td>
+                                                   <td contenteditable="true"></td>
+                                                     <td contenteditable="true"></td>
+	
+                                                        </tr>
+                                                          <tr>
+                                                <td contenteditable="true">2.</td>
+                                                     <td contenteditable="true"></td>
+                                                       <td contenteditable="true"></td>
+	                                                   <td contenteditable="true"></td>
+                                                          <td contenteditable="true"></td>
+                                                            <td contenteditable="true"></td>
+                                                            </tr>
+                                                              <tr>
+                                                            <td contenteditable="true">3.</td>
+                                                               <td contenteditable="true"></td>
+                                                                <td contenteditable="true"></td>
+	                                                       <td contenteditable="true"></td>
+                                                <td contenteditable="true"></td>
+                             <td contenteditable="true"></td>
+	
+                             </tr>
+                            <tr>
+                           <td contenteditable="true">4.</td>
+                           <td contenteditable="true"></td>
+                             <td contenteditable="true"></td>
+                        	<td contenteditable="true"></td>
+                             <td contenteditable="true"></td>
+                             <td contenteditable="true"></td>
+	
+                               </tr>
+                               <tr>
+                             <td contenteditable="true">5.</td>
+                           <td contenteditable="true"></td>
+                             <td contenteditable="true"></td>
+	                      <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                           <td contenteditable="true"></td>
+	
+                               </tr>
+                                <tr>
+                          <td contenteditable="true">6.</td>
+                             <td contenteditable="true"></td>
+                          <td contenteditable="true"></td>
+	                      <td contenteditable="true"></td>
+                           <td contenteditable="true"></td>
+                              <td contenteditable="true"></td>
+	
+                                </tr>
+                               <tr>
+                                <td contenteditable="true">7.</td>
+                                <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+	                            <td contenteditable="true"></td>
+                                <td contenteditable="true"></td>
+                                  <td contenteditable="true"></td>
+	
+                                  </tr>
+                                   <tr>
+                                   <td contenteditable="true">8.</td>
+                        <td contenteditable="true"></td>
+                             <td contenteditable="true"></td>
+	                        <td contenteditable="true"></td>
+                            <td contenteditable="true"></td>
+                           <td contenteditable="true"></td>
+	
+                          </tr>
+                             <tr>
+                               <td contenteditable="true">9.</td>
+                               <td contenteditable="true"></td>
+                                 <td contenteditable="true"></td>
+	                            <td contenteditable="true"></td>
+                                 <td contenteditable="true"></td>
+                                  <td contenteditable="true"></td>
+	
+                                   </tr>
+                             <tr>
+                               <td contenteditable="true">10.</td>
+                          <td contenteditable="true"></td>
+                         <td contenteditable="true"></td>
+	                     <td contenteditable="true"></td>
+                         <td contenteditable="true"></td>
+                          <td contenteditable="true"></td>
+	                
+                           </tr>
+  
+                            </table>
+
+                           <br>
+                     <div class="inner">
+                                <div class="row">
+                                                <form>
+                                                      <br>   <center>
+                                      <div class="input-icons"> 
+                                                   <i class="fa fa-user" style="font-size:30px"></i> &nbsp;         
+			                             	        <input type="text" name="" placeholder="User Name"><br>
+                                                 <i class="fa fa-mobile-phone" style="font-size:30px"></i> &nbsp;         
+				                                <input type="text" name="" placeholder="Mobile Number"><br>
+				
+				                                 <i class="fa fa-envelope" style="font-size:20px"></i> &nbsp;         
+				                                    <input type="text" name="" placeholder="Email ID"><br>
+		                                                    <i class="fa fa-id-badge" style="font-size:20px" ></i> &nbsp;		
+                                                   <input type="text" name="" placeholder="Note"><br> <i class="fa fa-map-marker" style="font-size:20px"></i>
+                                                           &nbsp;
+				                                        <input type="text" name="" placeholder="ADDRESS">
+
+				                                                <br><input type="submit" align="left"  name="submit" class="" value="SUBMIT">
+
+     	                             </div><br> 
+  	                                        </div><br> <center>   <input type="submit" align="right"  name="submit" class="upload" value="UPDATE" ></center>
+                                            
+	                                               </ul>
+	
+                                                         </center>
+ 
+                                                              </form>
+
+           <center>   <input type="submit" align="right"  name="submit" class="upload" value="UPDATE" ></center>
+		                                  
+                            </div>
+                                                </form>
+												
+                     </div>                                     
+
+             </div>	  	  
+
+</div>
+
+	    
+    </form>
+	
+	</div>
+</body>
+</html>

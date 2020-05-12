@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="css/delivary_boy_management.css">
+ <link rel="stylesheet"
+          href= 
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<title>Sample Map</title>
+<style>
+#mapdiv {
+	margin: 0;
+	padding: 0;
+	width: 500px;
+	height: 500px;
+}
+</style>
+
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
+<script>
+	var watchId = null;
+	function geoloc() {
+	if (navigator.geolocation) {
+		var optn = {
+				enableHighAccuracy : true,
+				timeout : Infinity,
+				maximumAge : 0
+		};
+	watchId = navigator.geolocation.watchPosition(showPosition, showError, optn);
+	} else {
+			alert('Geolocation is not supported in your browser');
+	}
+	}
+
+function showPosition(position) {
+		var googlePos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+		var mapOptions = {
+			zoom : 12,
+			center : googlePos,
+			mapTypeId : google.maps.MapTypeId.ROADMAP
+		};
+		var mapObj = document.getElementById('mapdiv');
+		var googleMap = new google.maps.Map(mapObj, mapOptions);
+		var markerOpt = {
+			map : googleMap,
+			position : googlePos,
+			title : 'Hi , I am here',
+			animation : google.maps.Animation.DROP
+		};
+		var googleMarker = new google.maps.Marker(markerOpt);
+		var geocoder = new google.maps.Geocoder();
+		geocoder.geocode({
+			'latLng' : googlePos
+			}, function(results, status) {
+				if (status == google.maps.GeocoderStatus.OK) {
+				if (results[1]) {
+					var popOpts = {
+						content : results[1].formatted_address,
+						position : googlePos
+					};
+				var popup = new google.maps.InfoWindow(popOpts);
+				google.maps.event.addListener(googleMarker, 'click', function() {
+				popup.open(googleMap);
+			});
+				} else {
+					alert('No results found');
+				}
+				} else {
+					alert('Geocoder failed due to: ' + status);
+				}
+			});
+			}
+
+			function stopWatch() {
+				if (watchId) {
+					navigator.geolocation.clearWatch(watchId);
+					watchId = null;
+
+				}
+			}
+
+		function showError(error) {
+		var err = document.getElementById('mapdiv');
+		switch(error.code) {
+		case error.PERMISSION_DENIED:
+		err.innerHTML = "User denied the request for Geolocation."
+		break;
+		case error.POSITION_UNAVAILABLE:
+		err.innerHTML = "Location information is unavailable."
+		break;
+		case error.TIMEOUT:
+		err.innerHTML = "The request to get user location timed out."
+		break;
+		case error.UNKNOWN_ERROR:
+		err.innerHTML = "An unknown error occurred."
+		break;
+		}
+		}
+		</script>
+
+	</head> <center><br>
+<div class="topnav">
+           <title>"Delivary Boy Traker System"</title>
+ <br>
+	      <b align="center" class="active" href="#home">Delivery Boy Traker System</b><br><br>	 
+	      	 	
+             </form>	
+           </div>  </center><br>
+	<center> <div class="fold">
+	<div class="inner">
+<ul>
+                                <div class="row">
+                                                <form>
+                                                      
+                                      <div class="input-icons"> 
+                                                   		 <i class="fa fa-user" style="font-size:30px"></i> &nbsp;         
+			                             	        <input type="text" name="" placeholder="User Name"><br>
+                                                 <i class="fa fa-mobile-phone" style="font-size:30px"></i> &nbsp;         
+				                                <input type="text" name="" placeholder="Mobile Number"><br>
+				
+				                                 <i class="fa fa-map-marker" style="font-size:23px"></i> &nbsp;         
+				                                    <input type="text" name="" placeholder="City"><br>
+		                                                   
+												   <i class="fa fa-map-marker" style="font-size:23px"></i>
+                                                           &nbsp;
+				                                        <input type="text" name="" placeholder="ADDRESS"><br>
+												 
+										     <input type="submit" align="left"  name="submit" class="" value="STATUS"><br>
+											  <input type="submit" align="left"  name="submit" class="" value="UPDATE LOCATION"><br>
+											   <input type="submit" align="left"  name="submit" class="" value="BACK">
+     	                             </div>
+  	                          </div>
+                                            
+	                                               </ul>         
+                                                              </form>
+
+                                                     
+		                                  
+                     </div>  
+	    <body align="left" onload="geoloc()"></body>
+		<p id = 'mapdiv'></p><br>
+		<input type="submit" onclick="stopWatch()" align="right" class="" value="Stop Traking">
+		
+	</div>
+	</center>
+	</body>
+</html>

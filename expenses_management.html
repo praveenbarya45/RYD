@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+<head>
+<link rel="stylesheet" href="css/expenses_management.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          href= 
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#customers tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+    <style>        
+        
+<style type="text/css">
+
+</head>
+</style>
+</head>
+<body background="#fff" width="100%">
+
+<center><div class="div4">
+<div class="topnav">
+           <title>"Expense Management System"</title>
+<br>
+	       <b align="center" class="active" href="#home">Expenses Management System</b><br><br>	 
+	        </center>	 	
+             </form>
+	
+           </div>
+  
+  <ul>
+  
+  <center>  <form name="form">
+  <div class="container1">
+     <br><br><br><br><br><br><br><br>
+	 
+              <div class="fold">
+                  <div div="div5">
+				  
+				  
+				  <div class="topnav" height="3px">
+				
+
+               <input type="submit" href="COMS.html" align="right"  name="submit" class="upload" value="OVERVIEW" formaction="EMS.html">
+					     <input type="submit" align="leftt"  name="submit" class="upload" value="ALL EXPENSE" formaction="DMS.html" >
+                          <input type="submit" formaction="DMS.html" align="left"  name="submit" class="upload" value="GRAPHICAL VIEW">                                                                 
+                                              <input type="submit" align="right"  name="submit" class="upload" value="NON-CHARGEABLE " formaction="DMS.html"> 
+												
+												 </div>
+											
+                                 
+                  </div>
+ </form><br>
+ <div class="inner1">
+						   
+	
+                                   <table id="customers">
+
+                               <tr>
+                                 <thead>
+                            <th width="10%" >S.No.</th>
+                              <th width="40%" >Category</th>
+                           <th width="40%" >Amount</th>                       						
+	
+                                    </tr>
+                                  </thead>
+  
+                                               <tr>
+                                              <td>1.</td>
+                                                  <td contenteditable="true"></td>
+                                                 <td contenteditable="true"></td>
+	                                             
+                                                        </tr>
+                                                          <tr>
+                                                <td>2.</td>
+                                                     <td contenteditable="true"></td>
+                                                       <td contenteditable="true"></td>
+	                                                  
+                                                         
+                                                            </tr>
+                                                              <tr>
+                                                            <td>3.</td>
+                                                               <td contenteditable="true"></td>
+                                                                <td contenteditable="true"></td>
+	                                                       
+                                              
+	
+                             </tr>
+                            <tr>
+                           <td>4.</td>
+                           <td contenteditable="true"></td>
+                             <td contenteditable="true"></td>
+                        	
+                               </tr>
+                               <tr>
+                             <td>5.</td>
+                           <td contenteditable="true"></td>
+                             <td contenteditable="true"></td>
+	                      
+                               </tr>   
+
+                                        						   
+                            </table>
+							<input type="submit" align="left"  name="submit" class="" value="UPDATE">
+	
+							<br><form>
+							<div class="div1"><p>Today's Expenses</p> <input type="text" name="" placeholder="Rs.."></div>						
+							<div class="div2"><p>Total Expenses</p>  <input type="text" name="" placeholder="Rs.."></div>
+							<div class="div3"><p>Month's Expenses</p> <input type="text" name="" placeholder="Rs.."></div></form>
+			      </div>	
+						   	<br>					   
+                     <div class="inner">
+                                <div class="row">
+                                                <form>
+                                                       <h3>Add Expenses</h3>
+                                      <div class="input-icons"> 
+									                <i class="fa fa-calendar" style="font-size:20px" ></i> &nbsp;													
+                                                  <input type="text" placeholder="Date of Expenses" onfocus="(this.type='date')" onblur="(this.type='text')"> 
+														<br>
+														
+		                                                    <i class="fa fa-briefcase" style="font-size:20px" ></i> &nbsp;
+															<select  class="gender" id="Gender" name="type">
+                                                
+                                                  <option value="Chargeable">Chargeable</option>    
+                                                   <option value="Non-Chargeable">Non-Chargeable</option>
+                                                     </select>	
+                                                   <br>
+                                                 <i class="fa fa-object-group" style="font-size:20px"></i> &nbsp;         
+				                                <input type="text" name="" placeholder="Item Name"><br>
+				                              <i class="fa fa-inr" style="font-size:20px" ></i> &nbsp;		
+                                                   <input type="text" name="" placeholder="Price"><br> 
+				                                 <i class="fa fa-sticky-note-o" style="font-size:23px"></i> &nbsp;         
+				                                    <input type="text" name="" placeholder="Note"><br>
+		                                                   																																			                                                    
+                                                    <input type="submit" align="left"  name="submit" class="" value="STATUS">
+	<center><input type="submit" align="right"  name="submit" class="" value="BACK"> </center>
+     	                             </div> 
+                           
+  	                          </div>
+                                          
+			  
+	                                               </ul>         
+                                                              </form>                                              
+		                                  
+                     </div>
+                                                </form>
+				</div> 
+               				
+  </div>
+  </div>
+         
+	
+</body>
+</html>
